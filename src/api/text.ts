@@ -4,6 +4,7 @@
 export interface TextSegment {
   text: string;
   position: number;
+  records: number;
 }
 
 /**
@@ -11,13 +12,12 @@ export interface TextSegment {
  */
 export async function processText(params: { text: string }): Promise<TextSegment[]> {
   const { text } = params;
-
   const matches: RegExpMatchArray | null = text.match(/\S[^\.\!\?]*[\.\!\?]/g);
-
   return (matches || []).map((input: string, index: number) => {
     return {
       text: input,
       position: index,
+      records: Math.floor(input.length/100) + 1,
     };
   });
 }

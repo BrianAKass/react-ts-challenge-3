@@ -1,7 +1,11 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 * {
