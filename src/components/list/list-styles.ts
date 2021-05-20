@@ -7,6 +7,7 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    height:'100%'
   },
   topButtons: {
     display: 'flex',
