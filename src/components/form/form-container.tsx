@@ -7,7 +7,7 @@ import { FormView } from './form-view';
 export const FormContainer = observer(() => {
   const store = useStore();
   const [loading, setLoading] = useState(false);
-  const [text, setText] = useState('');
+  const [text, setText] = useState(store.textSegmentStore.mobText);
   const onSubmit = async () => {
     setLoading(true);
     await store.textSegmentStore.processText(text);
