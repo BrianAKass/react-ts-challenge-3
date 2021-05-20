@@ -7,7 +7,8 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    height:'100%'
+    msOverflowStyle: 'none', /* IE and Edge */
+    scrollbarWidth: 'none', /* Firefox */
   },
   topButtons: {
     display: 'flex',
